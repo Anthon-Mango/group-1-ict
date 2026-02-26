@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fare Matrix Page</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .container {
+        background: white;
+        padding: 25px;
+        width: 400px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+
+    select, button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    .result {
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Fare Matrix</h1>
+
+    
+    <select id="destination">
+        <option value="50">Inside NCR - ₱200</option>
+        <option value="75">Outside NCR - ₱270</option>
+        <option value="100">Luzon - ₱250</option>
+        <option value="125">Visayas - ₱300</option>
+        <option value="150">Mindanao - ₱320</option>
+    </select>
+
+    
+    <select id="passengerType">
+        <option value="regular">Regular</option>
+        <option value="student">Student (20% Discount)</option>
+        <option value="elder">Elder (20% Discount)</option>
+    </select>
+
+    
+    <select id="timeVariant">
+        <option value="1">Regular Time (Normal Fare)</option>
+        <option value="1.2">Peak Hours (+20%)</option>
+        <option value="0.8">Off-Peak (-20%)</option>
+        <option value="1.15">Night Time (+15%)</option>
+        <option value="1.25">Holiday (+25%)</option>
+    </select>
+
+    <button onclick="calculateFare()">Calculate Fare</button>
+
+    <div class="result" id="result">
+        Final Fare: ₱0.00
+    </div>
+</div>
+
+<script>
+function calculateFare() {
+    let baseFare = parseFloat(document.getElementById("destination").value);
+    let passengerType = document.getElementById("passengerType").value;
+    let timeMultiplier = parseFloat(document.getElementById("timeVariant").value);
+
+    let finalFare = baseFare * timeMultiplier;
+
+    
+    if (passengerType === "student" || passengerType === "elder") {
+        finalFare *= 0.8;
+    }
+
+    document.getElementById("result").textContent =
+        "Final Fare: ₱" + finalFare.toFixed(2);
+}
+</script>
+
+</body>
+</html>
