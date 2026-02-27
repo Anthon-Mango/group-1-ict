@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Philippines Fare Guide Schedule</title>
+    <style>
+        body {
+            background-color: #0d47a1; /* Blue background */
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+            background-color: #1565c0;
+        }
+
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #1976d2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1e88e5;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Las pinas Fare Guide Schedule</h1>
+
+    <table>
+        <tr>
+            <th>Transport Type</th>
+            <th>Route</th>
+            <th>Fare (PHP)</th>
+            <th>Schedule Time</th>
+        </tr>
+        <tr>
+            <td>Motorcycle (Motor)</td>
+            <td>Quezon City to Makati</td>
+            <td>₱120 - ₱250</td>
+            <td>24 Hours (On-Call)</td>
+        </tr>
+        <tr>
+            <td>Car (Private / Ride App)</td>
+            <td>Manila to Tagaytay</td>
+            <td>₱150 - ₱200</td>
+            <td>24 Hours (Booking Required)</td>
+        </tr>
+        <tr>
+            <td>Motorcycle (Motor)</td>
+            <td>Cebu City Proper</td>
+            <td>₱50 - ₱150</td>
+            <td>5:00 AM - 11:00 PM</td>
+        </tr>
+        <tr>
+            <td>Car (Private)</td>
+            <td>Davao City Route</td>
+            <td>₱200 - ₱500</td>
+            <td>6:00 AM - 10:00 PM</td>
+        </tr>
+    </table>
+
+</body>
+</html>
