@@ -121,27 +121,21 @@
 
     
     <select id="destination">
-        <option value="50">Inside NCR - ₱200</option>
-        <option value="75">Outside NCR - ₱270</option>
-        <option value="100">Luzon - ₱250</option>
-        <option value="125">Visayas - ₱300</option>
-        <option value="150">Mindanao - ₱320</option>
+        <option value="50">North Avenue = Taft Avenue - ₱28</option>
+          <option value="50">Taft Avenue = North Avenue - ₱28</option>
     </select>
 
     
     <select id="passengerType">
-        <option value="regular">Regular</option>
+        <option value="regular">Regular (₱50) </option>
         <option value="student">Student (20% Discount)</option>
         <option value="elder">Elder (20% Discount)</option>
     </select>
 
     
     <select id="timeVariant">
-        <option value="1">Regular Time (Normal Fare)</option>
-        <option value="1.2">Peak Hours (+20%)</option>
-        <option value="0.8">Off-Peak (-20%)</option>
-        <option value="1.15">Night Time (+15%)</option>
-        <option value="1.25">Holiday (+25%)</option>
+          <option value="1"> Dropoff </option>
+          <option value="1"> Pick up </option>
     </select>
 
     <button onclick="calculateFare()">Calculate Fare</button>
@@ -183,6 +177,7 @@ function calculateFare() {
             
                   </body>
 </html>
+
 
 
 
